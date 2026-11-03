@@ -3,7 +3,8 @@
 export const ERROR_MESSAGES = {
   UNAUTHORIZED: '로그인이 필요합니다.',
   TOKEN_EXPIRED: '로그인이 만료되었습니다.',
-  INVALID_GOOGLE_TOKEN: '구글 로그인에 실패했습니다. 다시 시도해 주세요.',
+  INVALID_CREDENTIALS: '이메일 또는 비밀번호가 올바르지 않습니다.',
+  EMAIL_ALREADY_EXISTS: '이미 가입한 이메일입니다.',
   INVALID_REFRESH_TOKEN: '로그인이 만료되었습니다. 다시 로그인해 주세요.',
   INVALID_INPUT: '입력한 내용을 다시 확인해 주세요.',
   PROFILE_REQUIRED: '기본 정보를 먼저 입력해 주세요.',

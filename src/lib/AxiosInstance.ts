@@ -29,7 +29,8 @@ const axiosInstance = axios.create({
 
 axiosInstance.interceptors.request.use((config) => {
   const { accessToken } = useAuthStore.getState();
-  if (accessToken) config.headers.Authorization = `Bearer ${accessToken}`;
+  const publicAuth = config.url === '/api/auth/login' || config.url === '/api/auth/signup';
+  if (accessToken && !publicAuth) config.headers.Authorization = `Bearer ${accessToken}`;
   return config;
 });
 

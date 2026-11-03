@@ -4,18 +4,7 @@ import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from '@/styles/global';
 import { theme } from '@/styles/theme';
-import {
-  Blog,
-  Company,
-  Fav,
-  GoogleCallback,
-  Home,
-  Landing,
-  Loading,
-  Login,
-  MyPage,
-  UserInput,
-} from '@/pages';
+import { Blog, Company, Fav, Home, Landing, Loading, Login, MyPage, UserInput } from '@/pages';
 import Layout, { ProtectedRoute, SidebarLayout } from '@/layout';
 import { toasterProps } from '@/lib';
 import { ResponsiveGate } from '@/components';
@@ -35,11 +24,11 @@ const routes = createBrowserRouter([
       },
       {
         path: 'login',
-        element: <Login />,
+        element: <Login key="login" />,
       },
       {
-        path: 'google/callback',
-        element: <GoogleCallback />,
+        path: 'signup',
+        element: <Login key="signup" signupMode />,
       },
       {
         element: <ProtectedRoute />,
